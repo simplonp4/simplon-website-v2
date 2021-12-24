@@ -8,11 +8,17 @@
     - npm run watch
 
 ## L'hierarchie du projet
+
 |_ src
+
     |_scripts les fichiers js
+    
     |_scss les fichiers style (doivent etre ecrit en sass)
+    
 |_ assets les resources
+
     |_images
+    
 |_ dist les fichiers buider
     
 
