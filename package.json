@@ -1,0 +1,20 @@
+{
+  "name": "simplonv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devBuild": "webpack --mode development",
+    "prodBuild": "webpack --mode production",
+    "watch": "webpack --mode development --watch && sass"
+  },
+  "keywords": [],
+  "author": "SimplonP4",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.45.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
