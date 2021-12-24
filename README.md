@@ -1,11 +1,11 @@
 ## Pour bien demarer
 - Pour initialiser le projet avec toutes les dependance
-    - npm install
+    - ```npm install```
 
 - Pour builder en mode development : 
-    - npm run devBuild
+    - ```npm run devBuild```
 - Pour ne pas rebuilder à chaque modification :
-    - npm run watch
+    - ```npm run watch```
 
 ## L'hierarchie du projet
 
