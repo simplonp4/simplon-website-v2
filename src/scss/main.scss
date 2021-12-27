@@ -1,16 +1,48 @@
 @import "./bootstrap/_functions";
 @import "./bootstrap/_variables";
 @import "./bootstrap/mixins";
+$simplon-color: #ce0033;
+$simplon-rgba-color: rgb(206, 0, 51, 0.25);
+$body-color: #111;
+$primary: $simplon-color;
+$component-active-bg: $simplon-color;
+$link-color: $simplon-color;
+$input-focus-border-color: $simplon-color;
+$input-btn-focus-color: $simplon-rgba-color;
+$input-focus-box-shadow: 0 0 0 0.25rem $simplon-rgba-color;
 
+//LINK
+$nav-link-color: $body-color;
 $theme-colors: (
-   "primary": #0074d9,
-   "danger": #ce0033,
-   "simplon": #ce0033,
+   "danger": $danger,
+   "primary": $primary,
 );
 
 @import "./bootstrap/bootstrap";
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+//FONTS SIZE
+$sizes: (
+   fs1: small,
+   fs2a: x-small,
+   fs2b: xx-small,
+   fs3: medium,
+   fs4: large,
+   fs5a: x-large,
+   fs5b: xx-large,
+);
+
+@each $key, $size in $sizes {
+   .sp-fs-#{$size} {
+      font-size: $size;
+   }
+}
+//FONTS WEIGHT
+@for $i from 1 through 9 {
+   .sp-fw-#{$i} {
+      font-weight: 100 * $i;
+   }
+}
 
 * {
    box-sizing: border-box;
@@ -30,8 +62,6 @@ body {
    background: #000 !important;
    border-radius: 10px;
    opacity: 1;
-   /* color:rgb(206, 0, 51) !important;
-      */
 }
 
 h2.sp-line-under {
@@ -112,25 +142,15 @@ header {
    font-size: 0.7rem;
 }
 
-a.nav-link {
-   font-weight: 900;
-}
-
 label[for="search"] {
-   /* border: 1px solid  lightgray; */
    position: relative;
    width: 50%;
    height: fit-content;
 }
 
-/* input[name="search"]:hover ,input[name="search"]:focus{
-        border-color: #ce0033;
-        
-    } */
 label[for="search"] input {
    padding: 2px 16px;
    margin-right: 10px;
-   /* height: 10px; */
    outline: 1px solid lightgray;
    border-radius: 40px;
    outline-offset: 3px;
@@ -181,11 +201,9 @@ figure {
 }
 
 figcaption {
-   /* font-size: 3rem; */
    width: 100%;
    font-size: 4.5rem;
    font-weight: 800;
-   /* background-color: red; */
    text-align: center;
    top: 50%;
    left: 50%;
@@ -194,9 +212,6 @@ figcaption {
    text-transform: uppercase;
 }
 
-.left-bloc {
-   /* background-color: #E35D6A; */
-}
 
 .left-bloc,
 .right-bloc {
@@ -360,7 +375,6 @@ img.card-img-top {
    }
 
    .left-bloc {
-      /* background-color: #E35D6A; */
       border: 1px solid;
    }
 
@@ -381,8 +395,6 @@ img.card-img-top {
    .secondary-menu {
       width: 100%;
       margin: 0 auto;
-      /* border: 1px solid; */
-      /* position: relative; */
       display: flex;
       justify-content: space-between;
       margin-left: 0;
@@ -414,7 +426,6 @@ img.card-img-top {
       width: -moz-fit-content;
       width: fit-content;
       font-size: xx-small;
-      /* border-radius: 10px 50px 50px 10px; */
    }
 
    .menu p > span {
@@ -452,10 +463,6 @@ img.card-img-top {
    background-size: cover;
 }
 
-.sp-footer .col {
-   /* max-width: -moz-fit-content;
-      max-width: fit-content; */
-}
 
 .sp-footer .col a {
    text-decoration: none;
@@ -619,7 +626,6 @@ li.nav-item a::after {
 
    .sp-row-cols-md-3 .col {
       grid-column: span 1;
-      /* margin: 0 auto; */
    }
 }
 
@@ -639,4 +645,3 @@ svg.dropdown {
    max-width: 100px;
    height: auto;
 }
-
