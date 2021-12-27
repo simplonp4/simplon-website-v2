@@ -14,12 +14,17 @@
     |_scripts les fichiers js
     
     |_scss les fichiers style (doivent etre ecrit en sass)
+  
+        |_custom.scss style (personnalisation du theme)
     
 |_ assets les resources
 
     |_images
     
-|_ dist les fichiers buider
-    
+|_ dist les fichiers builder
+
+## Theme 
+### Color
+- primary : couleur primaire rouge Simplon (#ce0033)
 
     
