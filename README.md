@@ -24,7 +24,6 @@
 |_ dist les fichiers builder
 
 ## Theme 
-### Color
-- primary : couleur primaire rouge Simplon (#ce0033)
-
+### Colors
+- ![#ce0033](https://via.placeholder.com/15/ce0033/000000?text=+) primary : (`#ce0033`) 
     
