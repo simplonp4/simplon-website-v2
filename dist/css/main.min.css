@@ -199,7 +199,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #0a58ca;
+  color: #ce0033;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3477,7 +3477,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0a58ca;
+  color: #000;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -10163,6 +10163,10 @@ textarea.form-control-lg {
   font-size: small;
 }
 
+.sp-fs-smaller {
+  font-size: smaller;
+}
+
 .sp-fs-x-small {
   font-size: x-small;
 }
@@ -10177,6 +10181,10 @@ textarea.form-control-lg {
 
 .sp-fs-large {
   font-size: large;
+}
+
+.sp-fs-larger {
+  font-size: larger;
 }
 
 .sp-fs-x-large {
@@ -10221,6 +10229,62 @@ textarea.form-control-lg {
 
 .sp-fw-9 {
   font-weight: 900;
+}
+
+.sp-mw-1 {
+  max-width: 100px;
+}
+
+.sp-mw-2 {
+  max-width: 200px;
+}
+
+.sp-mw-3 {
+  max-width: 300px;
+}
+
+.sp-mw-4 {
+  max-width: 400px;
+}
+
+.sp-mw-5 {
+  max-width: 500px;
+}
+
+.sp-mw-6 {
+  max-width: 600px;
+}
+
+.sp-mw-7 {
+  max-width: 700px;
+}
+
+.sp-mw-8 {
+  max-width: 800px;
+}
+
+.sp-mw-9 {
+  max-width: 900px;
+}
+
+.sp-mw-10 {
+  max-width: 1000px;
+}
+
+.sp-mw-11 {
+  max-width: 1100px;
+}
+
+.sp-mw-12 {
+  max-width: 1200px;
+}
+
+.sp-mw-13 {
+  max-width: 1300px;
+}
+
+.sp-mw-14 {
+  max-width: 1400px;
 }
 
 * {
@@ -10337,7 +10401,6 @@ label[for=search] input {
 }
 
 label[for=search] input:focus {
-  outline: 1px solid #000;
   transition: 1s;
 }
 
@@ -10526,6 +10589,10 @@ img.card-img-top {
   .sp-text-sm {
     font-size: x-small;
   }
+
+  .sp-fs-md-medium {
+    font-size: medium !important;
+  }
 }
 @media (max-width: 300px) {
   .sp-input-group {
@@ -10548,6 +10615,10 @@ img.card-img-top {
 
   a.nav-link.active {
     border-bottom: none;
+  }
+
+  a.nav-link {
+    letter-spacing: -0.25px;
   }
 
   .left-bloc {
@@ -10621,10 +10692,6 @@ img.card-img-top {
   .menu p {
     border: 1px solid transparent;
     border-left: 5px solid transparent;
-  }
-
-  .sp-btn-danger {
-    font-size: 0.6rem;
   }
 
   .sp-text-sm {
@@ -10763,12 +10830,12 @@ li.nav-item a {
 li.nav-item a::after {
   position: absolute;
   content: "";
-  top: 160%;
-  height: 4px;
+  top: 136%;
+  height: 5px;
   left: 50%;
   transform: translateX(-50%);
   background: #ce0033;
-  width: 0%;
+  width: 0;
 }
 
 @media screen and (min-width: 768px) {

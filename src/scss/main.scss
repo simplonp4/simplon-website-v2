@@ -7,6 +7,8 @@ $body-color: #111;
 $primary: $simplon-color;
 $component-active-bg: $simplon-color;
 $link-color: $simplon-color;
+$nav-link-hover-color: #000;
+$link-hover-color: $simplon-color;
 $input-focus-border-color: $simplon-color;
 $input-btn-focus-color: $simplon-rgba-color;
 $input-focus-box-shadow: 0 0 0 0.25rem $simplon-rgba-color;
@@ -23,11 +25,13 @@ $theme-colors: (
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 //FONTS SIZE
 $sizes: (
-   fs1: small,
+   fs1a: small,
+   fs1b: smaller,
    fs2a: x-small,
    fs2b: xx-small,
    fs3: medium,
-   fs4: large,
+   fs4a: large,
+   fs4b: larger,
    fs5a: x-large,
    fs5b: xx-large,
 );
@@ -43,7 +47,14 @@ $sizes: (
       font-weight: 100 * $i;
    }
 }
+//FONTS WEIGHT
+@for $i from 1 through 14 {
+   .sp-mw-#{$i} {
+      max-width: 100px * $i;
+   }
+}
 
+// ==========================================
 * {
    box-sizing: border-box;
 }
@@ -158,7 +169,6 @@ label[for="search"] input {
 }
 
 label[for="search"] input:focus {
-   outline: 1px solid #000;
    transition: 1s;
 }
 
@@ -211,7 +221,6 @@ figcaption {
    color: #fff;
    text-transform: uppercase;
 }
-
 
 .left-bloc,
 .right-bloc {
@@ -348,6 +357,9 @@ img.card-img-top {
    .sp-text-sm {
       font-size: x-small;
    }
+   .sp-fs-md-medium {
+      font-size: medium !important;
+   }
 }
 
 @media (max-width: 300px) {
@@ -373,7 +385,9 @@ img.card-img-top {
    a.nav-link.active {
       border-bottom: none;
    }
-
+   a.nav-link {
+      letter-spacing: -0.25px;
+   }
    .left-bloc {
       border: 1px solid;
    }
@@ -447,22 +461,16 @@ img.card-img-top {
       border-left: 5px solid transparent;
    }
 
-   .sp-btn-danger {
-      font-size: 0.6rem;
-   }
-
    .sp-text-sm {
       font-size: 0.9rem;
    }
 }
-
 .sp-footer {
    width: 100%;
    min-height: 200px;
    background-image: url(../../assets/images/Footer.svg);
    background-size: cover;
 }
-
 
 .sp-footer .col a {
    text-decoration: none;
@@ -589,12 +597,12 @@ li.nav-item a {
 li.nav-item a::after {
    position: absolute;
    content: "";
-   top: 160%;
-   height: 4px;
+   top: 136%;
+   height: 5px;
    left: 50%;
    transform: translateX(-50%);
    background: #ce0033;
-   width: 0%;
+   width: 0;
 }
 
 @media screen and (min-width: 768px) {
